@@ -1,3 +1,4 @@
+import os
 import discord
 from discord.ext import commands
 import random
@@ -37,5 +38,5 @@ async def tour(ctx, joueur: discord.Member):
     
     await ctx.send(embed=embed)
 
-# Remplace 'TON_TOKEN_SECRET' par le véritable token de ton bot Discord
-bot.run("TON_TOKEN_SECRET")
+# Remplace 'TON_TOKEN_SECRET' par le véritable token de ton bot bot.run(os.getenv("TOKEN"))
+bot.run(os.getenv("TOKEN"))
